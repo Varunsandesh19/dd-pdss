@@ -1,0 +1,12 @@
+Deadline Domino — Registration Repair
+
+1. Stop any currently running server using Ctrl+C in its VS Code terminal.
+2. Extract this ZIP. In VS Code use File > Open Folder and choose Deadline-Domino-Registration-Repair.
+3. In that folder run: python3 -m pip install -r requirements.txt
+4. Start: python3 server.py
+5. In browser open http://127.0.0.1:8080/?v=registration-repair
+6. Force refresh with Cmd+Shift+R (Chrome) or Cmd+Option+R (Safari).
+7. Register with any valid email and password of 8+ characters.
+
+DO NOT run an older project folder at the same time.
+No real Gmail/Microsoft account sync without OAuth credentials.
