@@ -89,7 +89,7 @@ class Handler(BaseHTTPRequestHandler):
     if path=='/api/register':
      name=str(data.get('name','')).strip()[:80]
      if len(name)<2:raise ValueError('Enter your name')
-     if len(password)<8:raise ValueError('Password must have at least 8 characters')
+     if not password or not password.strip():raise ValueError('Password is required')
      try:c.execute('INSERT INTO users(email,name,password_hash) VALUES(?,?,?)',(email,name,hash_password(password)))
      except sqlite3.IntegrityError:return self.send_json({'error':'Email already registered'},409)
     user=c.execute('SELECT * FROM users WHERE email=?',(email,)).fetchone()
