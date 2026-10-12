@@ -10,7 +10,7 @@ import integrations
 
 ROOT=Path(__file__).resolve().parent
 DB=Path(os.environ.get('DD_DB',str(ROOT/'deadline_domino.sqlite3')))
-HOST=os.environ.get('HOST','127.0.0.1'); PORT=int(os.environ.get('PORT','8080'))
+HOST=os.environ.get('HOST','0.0.0.0'); PORT=int(os.environ.get('PORT','8080'))
 
 def now():return datetime.now(timezone.utc)
 def iso(dt):return dt.isoformat(timespec='seconds')
